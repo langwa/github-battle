@@ -4,11 +4,12 @@ var React = require('react'),
     UserDetailsWrapper = require('./UserDetailsWrapper'),
     PropTypes = React.PropTypes,
     styles = require('../styles'),
-    MainContainer = require('./MainContainer');
+    MainContainer = require('./MainContainer'),
+    Loading = require('./Loading');
 
 function ConfirmBattle(props) {
     return props.isLoading === true
-        ? <p> LOADING! </p>
+        ? <Loading text='Waiting' speed={800}/>
         : <MainContainer>
             <h1>Confirm Players</h1>
             <div className="col-sm-8 col-sm-offset-2">
